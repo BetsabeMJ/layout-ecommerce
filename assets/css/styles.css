@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(223, 223, 223);
+  font-family: poppins;
+}
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "barra-nav barra-nav"
+    "menu-lateral contenido-pincipal"
+    "pie-de-pagina pie-de-pagina";
+  grid-template-rows: 1fr 85% 1fr;
+  grid-template-columns: 1fr 80%;
+  min-height: 100vh;
+}
+/* ////////////////////////////////////////////////// */
+/* NAVBAR */
+.barra-nav {
+  grid-area: barra-nav;
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+/* ////////////////////////////////////////////////// */
+/* ASIDE MENU LATERAL */
+.menu-lateral {
+  grid-area: menu-lateral;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.parrafo__menu-lateral {
+  font-weight: bold;
+}
+.number__menu-lateral {
+  font-weight: lighter;
+}
+/* ////////////////////////////////////////////////// */
+/* CONTENIDO PRINCIPAL */
+.contenido-pincipal {
+  grid-area: contenido-pincipal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+img {
+  width: 100%;
+}
+.card__contenido-principal {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 0px 10px;
+  width: 30%;
+  height: 50%;
+}
+button {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding-block: 15px;
+  padding-inline: 40%;
+}
+button:hover {
+  background-color: rgb(153, 176, 245);
+  cursor: pointer;
+}
+/* ////////////////////////////////////////////////// */
+/* FOOTER */
+.pie-de-pagina {
+  grid-area: pie-de-pagina;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
